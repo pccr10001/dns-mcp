@@ -75,6 +75,19 @@ python -m dns_mcp.server
 
 Query DNS records for a specified hostname.
 
+### Install
+```
+"mcpServers": {
+    "dns-mcp": {
+      "command": "uv",
+      "args": [
+        "--directory", "PATH_TO_SOURCES",
+        "run", "dns-mcp"
+      ]
+    }
+}
+```
+
 #### Parameters
 
 - `host` (required): The hostname to query (e.g., 'example.com')
@@ -143,7 +156,6 @@ The server automatically detects system DNS configuration:
 ```bash
 uv sync --dev
 ```
-
 
 ## License
 
