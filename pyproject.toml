@@ -1,0 +1,32 @@
+[project]
+name = "dns-mcp"
+version = "0.1.0"
+description = "A cross-platform DNS query MCP server using fastmcp with support for Windows/Linux/macOS"
+authors = [
+    {name = "Power Li", email = "pccr10001@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastmcp>=0.3.0",
+    "dnspython>=2.4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+]
+
+[project.scripts]
+dns-mcp = "dns_mcp.server:cli_main"

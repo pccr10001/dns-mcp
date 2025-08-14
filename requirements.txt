@@ -1,0 +1,2 @@
+fastmcp>=0.3.0
+dnspython>=2.4.0
